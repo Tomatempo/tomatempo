@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #0a1f1a;  /* verde escuro profundo */
-    color: #e0f2e9;
+    background: #f5f0e8;
+    color: #1a1a1a;
     overflow: hidden;
     position: relative;
 }
@@ -46,7 +46,7 @@ body {
     width: 300px;
     height: 300px;
     object-fit: contain;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
     transition: transform 0.2s ease;
 }
 
@@ -58,7 +58,7 @@ body {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: -0.3px;
-    background: linear-gradient(135deg, #ff6b4a, #c93a2c);
+    background: linear-gradient(135deg, #ff0013, #9e0202);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -67,14 +67,14 @@ body {
 
 /* Card do timer */
 .timer-card {
-    background: rgba(18, 35, 28, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border-radius: 3rem;
     padding: 2rem 2rem;
     width: 100%;
     text-align: center;
-    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
-    border: 1px solid rgba(255, 80, 50, 0.3);
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+    border: 1px solid rgba(199, 0, 0, 0.35);
     transition: all 0.2s;
 }
 
@@ -82,14 +82,14 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: #2c3e2b;
+    background: #eaf6ef;
     padding: 0.4rem 1.2rem;
     border-radius: 60px;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #ffd0b5;
+    color: #00bf63;
     margin-bottom: 1.5rem;
-    border-left: 3px solid #e34d2b;
+    border-left: 3px solid #ff0013;
 }
 
 .timer-display {
@@ -98,8 +98,8 @@ body {
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
     letter-spacing: 5px;
-    color: #fbe9d2;
-    text-shadow: 0 0 12px rgba(227, 77, 43, 0.4);
+    color: #9e0202;
+    text-shadow: 0 0 12px rgba(255, 0, 19, 0.2);
     margin: 0.5rem 0;
 }
 
@@ -111,31 +111,36 @@ body {
 }
 
 .ctrl-btn {
-    background: rgba(30, 45, 38, 0.9);
+    background: rgba(245, 240, 232, 0.9);
     border: none;
     padding: 0.7rem 1.6rem;
     border-radius: 2rem;
     font-weight: 600;
     font-size: 1rem;
-    color: #f0e6d8;
+    color: #9e0202;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
     cursor: pointer;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .ctrl-btn i {
     font-size: 1rem;
+    color: #00bf63;
 }
 
 .ctrl-btn:hover {
-    background: #e34d2b;
+    background: #ff0013;
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(227, 77, 43, 0.4);
+    box-shadow: 0 8px 20px rgba(255, 0, 19, 0.35);
+}
+
+.ctrl-btn:hover i {
+    color: white;
 }
 
 .ctrl-btn:active {
@@ -153,14 +158,14 @@ body {
 }
 
 .mode-option {
-    background: rgba(20, 35, 28, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(227, 77, 43, 0.4);
+    border: 1px solid rgba(199, 0, 0, 0.35);
     padding: 0.7rem 1.3rem;
     border-radius: 3rem;
     font-weight: 500;
     font-size: 0.9rem;
-    color: #e0e7e0;
+    color: #1a1a1a;
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
@@ -170,7 +175,7 @@ body {
 
 .mode-option i {
     font-size: 1.1rem;
-    color: #e34d2b;
+    color: #00bf63;
 }
 
 .mode-option .duration {
@@ -180,18 +185,19 @@ body {
 }
 
 .mode-option.active {
-    background: #e34d2b;
+    background: #ff0013;
     color: white;
-    border-color: #ffb085;
-    box-shadow: 0 0 12px rgba(227,77,43,0.6);
+    border-color: #ff5757;
+    box-shadow: 0 0 12px rgba(255, 0, 19, 0.4);
 }
 
 .mode-option.active i {
-    color: white;
+    color: #63ff98;
 }
 
 .status-message {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 191, 99, 0.12);
+    color: #00bf63;
     padding: 0.5rem 1.2rem;
     border-radius: 3rem;
     font-size: 0.85rem;
